@@ -90,7 +90,7 @@ async function loadPDFs() {
             data.forEach(file => {
                 if (file.name.toLowerCase().endsWith(".pdf")) {
                     let link = `https://anhjob.github.io/bai_giang_tin_hoc/${folder}/${file.name}`;
-                    let html = `<div class="pdf-item"><a href="${link}" target="_blank">${file.name}</a></div>`;
+                    let html = `<div class="pdf-item btn-primary"><a href="${link}" target="_blank">${file.name}</a></div>`;
                     document.getElementById(listID).innerHTML += html;
                 }
             });
