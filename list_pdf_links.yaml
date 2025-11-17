@@ -1,64 +1,4 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bài giảng Tin học</title>
-<link href="./Scripts/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="./Scripts/all.min.css">
-<script src="./Scripts/js-yaml.min.js"></script>
-
-<style>
-    body { background:#022355; color: #f5f3f3; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
-    .folder-title { margin-top: 40px; font-size: 26px; font-weight: bold; }
-    .pdf-row { background: white; color: #000; padding: 12px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 8px; display: flex; align-items: center; }
-    .pdf-row:hover { background: #e9f5ff; }
-    .pdf-col { padding: 0 5px; display: flex; align-items: center; justify-content: center; }
-    .pdf-col-left { justify-content: flex-start; }
-    .footer { margin-top: 50px; padding: 20px; text-align:center; color:#f5f3f3; }
-</style>
-</head>
-<body>
-
-<div class="container py-4">
-
-    <h1 class="text-center mb-4">📚 Danh sách bài giảng Tin học THCS</h1>
-    <hr>
-
-    <div class="text-center mb-4">
-        <input id="searchBox" type="text" class="form-control mx-auto" style="max-width: 400px;" placeholder="🔍 Tìm bài giảng theo tên…">
-    </div>
-
-    <div id="K6-section">
-        <div class="folder-title alert alert-primary">🏫Lớp K6</div>
-        <div id="K6-list"></div>
-    </div>
-
-    <div id="K7-section">
-        <div class="folder-title alert alert-warning">🏫Lớp K7</div>
-        <div id="K7-list"></div>
-    </div>
-
-    <div id="K8-section">
-        <div class="folder-title alert alert-success">🏫Lớp K8</div>
-        <div id="K8-list"></div>
-    </div>
-
-    <div id="K9-section">
-        <div class="folder-title alert alert-danger">🏫Lớp K9</div>
-        <div id="K9-list"></div>
-    </div>
-
-</div>
-
-<div class="footer">
-    <hr>
-    © 2025 - Bài giảng Tin học | anhjob.github.io
-</div>
-
-<!-- YAML nhúng trực tiếp -->
-<script type="text/yaml" id="yamlData">
-K6: []
+K6:[]
 K7:
 - ten: K7.A.B1.pdf
   ngay_cap_nhat: '2025-11-10'
@@ -104,7 +44,7 @@ K7:
   ngay_cap_nhat: '2025-11-10'
   xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K7/K7.E.B1.pdf
   tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K7/K7.E.B1.pdf
-K8: []
+K8:[]
 K9:
 - ten: K9.A.B1.pdf
   ngay_cap_nhat: '2025-11-10'
@@ -150,72 +90,3 @@ K9:
   ngay_cap_nhat: '2025-11-10'
   xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K9/K9.E3.B1.pdf
   tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K9/K9.E3.B1.pdf
-</script>
-
-<script>
-let allRows = [];
-
-function renderList(list, containerId) {
-    const container = document.getElementById(containerId);
-    container.innerHTML = "";
-
-    if (!list || list.length === 0) {
-        container.innerHTML = '<div class="text-muted">Chưa có bài giảng</div>';
-        return;
-    }
-
-    list.forEach((row, index) => {
-        const html = document.createElement("div");
-        html.className = "pdf-row";
-        html.setAttribute("data-name", row.ten.toLowerCase());
-
-        html.innerHTML = `
-            <div class="pdf-col col-1 text-center fw-bold">${index + 1}</div>
-            <div class="pdf-col col-4 pdf-col-left">${row.ten}</div>
-            <div class="pdf-col col-2 text-center">${row.ngay_cap_nhat}</div>
-            <div class="pdf-col col-2 text-center">
-                <a class="btn btn-sm btn-primary" href="${row.xem}" target="_blank">
-                    📖Xem
-                </a>
-            </div>
-            <div class="pdf-col col-2 text-center">
-                <a class="btn btn-sm btn-success" href="${row.tai}">
-                    🔽Tải về
-                </a>
-            </div>
-        `;
-        container.appendChild(html);
-    });
-
-    allRows = document.querySelectorAll(".pdf-row");
-}
-
-function loadYAML() {
-    try {
-        const yamlText = document.getElementById("yamlData").textContent;
-        const data = jsyaml.load(yamlText);
-
-        renderList(data.K6, "K6-list");
-        renderList(data.K7, "K7-list");
-        renderList(data.K8, "K8-list");
-        renderList(data.K9, "K9-list");
-    } catch (e) {
-        console.error("Lỗi parse YAML:", e);
-    }
-}
-
-function applySearch() {
-    const keyword = document.getElementById("searchBox").value.toLowerCase();
-    allRows.forEach(row => {
-        const name = row.getAttribute("data-name");
-        row.style.display = name.includes(keyword) ? "flex" : "none";
-    });
-}
-
-document.getElementById("searchBox").addEventListener("input", applySearch);
-
-loadYAML();
-</script>
-
-</body>
-</html>
