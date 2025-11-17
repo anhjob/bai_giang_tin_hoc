@@ -2,220 +2,67 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bài giảng Tin học</title>
+
 <link href="./Scripts/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="./Scripts/all.min.css">
-<script src="./Scripts/js-yaml.min.js"></script>
 
 <style>
-    body { background:#022355; color: #f5f3f3; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
-    .folder-title { margin-top: 40px; font-size: 26px; font-weight: bold; }
-    .pdf-row { background: white; color: #000; padding: 12px; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 8px; display: flex; align-items: center; }
-    .pdf-row:hover { background: #e9f5ff; }
-    .pdf-col { padding: 0 5px; display: flex; align-items: center; justify-content: center; }
-    .pdf-col-left { justify-content: flex-start; }
+    body { background:#011739; color:#f5f3f3; font-family: "Segoe UI", Tahoma, sans-serif; }
+    .pdf-iframe { width: 100%; height: 80vh; border: none; }
+    table thead th { color: #ffe082; font-size: 1.05rem; }
+    table tbody td { color: #fff; }
     .footer { margin-top: 50px; padding: 20px; text-align:center; color:#f5f3f3; }
 </style>
 </head>
-<body>
 
-<div class="container py-4">
+<body class="container py-4">
 
-    <h1 class="text-center mb-4">📚 Danh sách bài giảng Tin học THCS</h1>
-    <hr>
+<h1 class="text-center mb-4">📚 Bài giảng Tin học THCS</h1>
+<hr>
 
-    <div class="text-center mb-4">
-        <input id="searchBox" type="text" class="form-control mx-auto" style="max-width: 400px;" placeholder="🔍 Tìm bài giảng theo tên…">
-    </div>
-
-    <div id="K6-section">
-        <div class="folder-title alert alert-primary">🏫Lớp K6</div>
-        <div id="K6-list"></div>
-    </div>
-
-    <div id="K7-section">
-        <div class="folder-title alert alert-warning">🏫Lớp K7</div>
-        <div id="K7-list"></div>
-    </div>
-
-    <div id="K8-section">
-        <div class="folder-title alert alert-success">🏫Lớp K8</div>
-        <div id="K8-list"></div>
-    </div>
-
-    <div id="K9-section">
-        <div class="folder-title alert alert-danger">🏫Lớp K9</div>
-        <div id="K9-list"></div>
-    </div>
-
+<!-- ================== TABS ================== -->
+<ul class="nav nav-tabs">
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#K6">KHỐI 6</button></li>
+    <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#K7">KHỐI 7</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#K8">KHỐI 8</button></li>
+    <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#K9">KHỐI 9</button></li>
+</ul>
+<br>
+<!-- =============== TAB CONTENT =============== -->
+<div class="tab-content mt-3">
+    <div class="tab-pane fade" id="K6"></div>
+    <div class="tab-pane fade show active" id="K7"></div>
+    <div class="tab-pane fade" id="K8"></div>
+    <div class="tab-pane fade" id="K9"></div>
 </div>
+
+<!-- =============== MODAL PDF VIEW =============== -->
+<div class="modal fade" id="pdfModal">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Xem tài liệu PDF</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-0">
+                <iframe id="pdfFrame" class="pdf-iframe"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./Scripts/bootstrap.bundle.min.js"></script>
+
+<!-- ================== DATABASE JS ================== -->
+<script src="./Data/list_pdf_links.js"></script>
+
+<!-- ================== MAIN JS ================== -->
+<script src="./Scripts/loadData.js"></script>
 
 <div class="footer">
     <hr>
-    © 2025 - Bài giảng Tin học | anhjob.github.io
+    © 2025 - Bài giảng Tin học | Mr. Anh
 </div>
-
-<!-- YAML nhúng trực tiếp -->
-<script type="text/yaml" id="yamlData">
-K6: []
-K7:
-- ten: K7.A.B1.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K7/K7.A.B1.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K7/K7.A.B1.pdf
-- ten: K7.A.B2.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K7/K7.A.B2.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K7/K7.A.B2.pdf
-- ten: K7.A.B3.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K7/K7.A.B3.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K7/K7.A.B3.pdf
-- ten: K7.A.B4.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K7/K7.A.B4.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K7/K7.A.B4.pdf
-- ten: K7.A.B5.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K7/K7.A.B5.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K7/K7.A.B5.pdf
-- ten: K7.A.B6.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K7/K7.A.B6.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K7/K7.A.B6.pdf
-- ten: K7.C.B1.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K7/K7.C.B1.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K7/K7.C.B1.pdf
-- ten: K7.C.B3.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K7/K7.C.B3.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K7/K7.C.B3.pdf
-- ten: K7.D.B1.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K7/K7.D.B1.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K7/K7.D.B1.pdf
-- ten: K7.D.B2.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K7/K7.D.B2.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K7/K7.D.B2.pdf
-- ten: K7.E.B1.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K7/K7.E.B1.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K7/K7.E.B1.pdf
-K8: []
-K9:
-- ten: K9.A.B1.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K9/K9.A.B1.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K9/K9.A.B1.pdf
-- ten: K9.A.B2.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K9/K9.A.B2.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K9/K9.A.B2.pdf
-- ten: K9.C.B1.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K9/K9.C.B1.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K9/K9.C.B1.pdf
-- ten: K9.C.B2.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K9/K9.C.B2.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K9/K9.C.B2.pdf
-- ten: K9.D.B1.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K9/K9.D.B1.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K9/K9.D.B1.pdf
-- ten: K9.D.B2.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K9/K9.D.B2.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K9/K9.D.B2.pdf
-- ten: K9.E1.B1.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K9/K9.E1.B1.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K9/K9.E1.B1.pdf
-- ten: K9.E2.B1.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K9/K9.E2.B1.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K9/K9.E2.B1.pdf
-- ten: K9.E2.B2.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K9/K9.E2.B2.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K9/K9.E2.B2.pdf
-- ten: K9.E2.B3.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K9/K9.E2.B3.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K9/K9.E2.B3.pdf
-- ten: K9.E3.B1.pdf
-  ngay_cap_nhat: '2025-11-10'
-  xem: https://github.com/anhjob/bai_giang_tin_hoc/blob/main/K9/K9.E3.B1.pdf
-  tai: https://raw.githubusercontent.com/anhjob/bai_giang_tin_hoc/main/K9/K9.E3.B1.pdf
-</script>
-
-<script>
-let allRows = [];
-
-function renderList(list, containerId) {
-    const container = document.getElementById(containerId);
-    container.innerHTML = "";
-
-    if (!list || list.length === 0) {
-        container.innerHTML = '<div class="text-muted">Chưa có bài giảng</div>';
-        return;
-    }
-
-    list.forEach((row, index) => {
-        const html = document.createElement("div");
-        html.className = "pdf-row";
-        html.setAttribute("data-name", row.ten.toLowerCase());
-
-        html.innerHTML = `
-            <div class="pdf-col col-1 text-center fw-bold">${index + 1}</div>
-            <div class="pdf-col col-4 pdf-col-left">${row.ten}</div>
-            <div class="pdf-col col-2 text-center">${row.ngay_cap_nhat}</div>
-            <div class="pdf-col col-2 text-center">
-                <a class="btn btn-sm btn-primary" href="${row.xem}" target="_blank">
-                    📖Xem
-                </a>
-            </div>
-            <div class="pdf-col col-2 text-center">
-                <a class="btn btn-sm btn-success" href="${row.tai}">
-                    🔽Tải về
-                </a>
-            </div>
-        `;
-        container.appendChild(html);
-    });
-
-    allRows = document.querySelectorAll(".pdf-row");
-}
-
-function loadYAML() {
-    try {
-        const yamlText = document.getElementById("yamlData").textContent;
-        const data = jsyaml.load(yamlText);
-
-        renderList(data.K6, "K6-list");
-        renderList(data.K7, "K7-list");
-        renderList(data.K8, "K8-list");
-        renderList(data.K9, "K9-list");
-    } catch (e) {
-        console.error("Lỗi parse YAML:", e);
-    }
-}
-
-function applySearch() {
-    const keyword = document.getElementById("searchBox").value.toLowerCase();
-    allRows.forEach(row => {
-        const name = row.getAttribute("data-name");
-        row.style.display = name.includes(keyword) ? "flex" : "none";
-    });
-}
-
-document.getElementById("searchBox").addEventListener("input", applySearch);
-
-loadYAML();
-</script>
-
 </body>
 </html>
