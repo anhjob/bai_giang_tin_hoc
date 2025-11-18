@@ -1,3 +1,11 @@
+# ✅ Link GitHub Pages (để chạy trang web)
+
+Đây là link chạy file trên web, dành cho website tĩnh:
+https://<user>.github.io/<repo>/index.html
+
+Ví dụ:
+https://anhjob.github.io/bai_giang_tin_hoc/index.html
+
 # BÀI GIẢNG TIN HỌC K7
 
 ## CHỦ ĐỀ A:  MÁY TÍNH VÀ CỘNG ĐỒNG

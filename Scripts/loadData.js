@@ -3,6 +3,10 @@ function openPDF(url) {
     new bootstrap.Modal(document.getElementById("pdfModal")).show();
 }
 
+function openYouTube(url) {
+    window.open(url, "_blank");     // mở tab mới
+}
+
 async function loadTabData(tabId) {
     const box = document.getElementById(tabId);
     box.innerHTML = "";
@@ -37,7 +41,7 @@ async function loadTabData(tabId) {
     data.forEach(item => {
         const tr = document.createElement("tr");
 
-        tr.innerHTML = `
+        rowHTML1 = `
             <td>${item.ten_bai}</td>
             <td>${item.ngay_tao}</td>
             <td class="text-center">
@@ -54,10 +58,17 @@ async function loadTabData(tabId) {
                 </a>` : '--'}
             </td>
             <td class="text-center">
-                ${item.youtube ? `<a class="btn btn-sm btn-danger" href="${item.youtube}" target="_blank">📼YouTube</a>` : '--'}
+                ${item.youtube ? `<button class="btn btn-sm btn-danger" onclick="openYouTube('${item.youtube}')">📼YouTube</button>` : '--'}                
             </td>
         `;
 
+        rowHTML2 = `
+            <td colspan="5" class="text-left"><div class="chude">${item.ten_bai}</div></td>
+        `;
+
+        item.link ? rowHTML=rowHTML1 : rowHTML=rowHTML2;        
+        
+        tr.innerHTML = rowHTML;
         tbody.appendChild(tr);
     });
 
