@@ -16,8 +16,11 @@ window.DB = {
         { ten_bai: "K7.D.B1", ngay_tao: "2025-11-10", link: "./K7/K7.D.B1.pdf" ,youtube: "https://youtu.be/lqTvtqLfRaw" },
         { ten_bai: "K7.D.B2", ngay_tao: "2025-11-10", link: "./K7/K7.D.B2.pdf" ,youtube: "https://youtu.be/RgDyVDWGANo" },
 
-        { ten_bai: "👉K7.E", ngay_tao: "--", link: "" ,youtube: "" },
-        { ten_bai: "K7.E.B1", ngay_tao: "2025-11-10", link: "./K7/K7.E.B1.pdf" ,youtube: "https://youtu.be/5R1YAzFQOR0" }
+        { ten_bai: "👉K7_E", ngay_tao: "--", link: "" ,youtube: "" },
+        { ten_bai: "K7_E0_B1", ngay_tao: "2025-11-10", link: "./K7/K7_E0_B1.pdf" ,youtube: "https://youtu.be/5R1YAzFQOR0" },        
+        { ten_bai: "K7_E0_B2_B3", ngay_tao: "2026-01-05", link: "./K7/K7_E0_B2_B3.pdf" ,youtube: "" },
+        { ten_bai: "K7_E0_B4", ngay_tao: "2026-01-05", link: "./K7/K7_E0_B4.pdf" ,youtube: "" },
+        { ten_bai: "K7_E0_B5", ngay_tao: "2026-01-05", link: "./K7/K7_E0_B5.pdf" ,youtube: "" }
     ],
 
     K9: [
@@ -41,8 +44,10 @@ window.DB = {
         { ten_bai: "K9.E2.B2", ngay_tao: "2025-11-10", link: "./K9/K9.E2.B2.pdf" ,youtube: "https://youtu.be/7Cn_dn4OTQw" },
         { ten_bai: "K9.E2.B3", ngay_tao: "2025-11-10", link: "./K9/K9.E2.B3.pdf" ,youtube: "https://youtu.be/_YgM4igF10k" },
 
-        { ten_bai: "👉K9.E3", ngay_tao: "--", link: "" ,youtube: "" },
-        { ten_bai: "K9.E3.B1", ngay_tao: "2025-11-10", link: "./K9/K9.E3.B1.pdf" ,youtube: "https://youtu.be/-NrEOParezs" }
+        { ten_bai: "👉K9_E3", ngay_tao: "--", link: "" ,youtube: "" },
+        { ten_bai: "K9.E3.B1", ngay_tao: "2025-11-10", link: "./K9/K9.E3.B1.pdf" ,youtube: "https://youtu.be/-NrEOParezs" },
+        { ten_bai: "K9_E3_B2_B3", ngay_tao: "2026-01-10", link: "./K9/K9_E3_B2_B3.pdf" ,youtube: "" },
+        { ten_bai: "K9_E3_B4", ngay_tao: "2026-01-10", link: "./K9/K9_E3_B4.pdf" ,youtube: "" }
     ],
 
     K6: [],
