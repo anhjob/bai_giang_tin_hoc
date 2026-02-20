@@ -22,7 +22,9 @@ window.DB = {
         { ten_bai: "K7_E_B4", ngay_tao: "2026-01-10", link: "./K7/K7_E0_B4.pdf" ,youtube: "" },
         { ten_bai: "K7_E_B5", ngay_tao: "2026-01-10", link: "./K7/K7_E0_B5.pdf" ,youtube: "" },
         { ten_bai: "K7_E_B6", ngay_tao: "2026-01-12", link: "./K7/K7_E0_B6.pdf" ,youtube: "" },
-        { ten_bai: "K7_E_B7", ngay_tao: "2026-01-12", link: "./K7/K7_E0_B7.pdf" ,youtube: "" }
+        { ten_bai: "K7_E_B7", ngay_tao: "2026-01-12", link: "./K7/K7_E0_B7.pdf" ,youtube: "" },
+        { ten_bai: "K7_E_B8", ngay_tao: "2026-02-20", link: "./K7/K7_E0_B8.pdf" ,youtube: "" },
+        { ten_bai: "K7_E_B9", ngay_tao: "2026-02-20", link: "./K7/K7_E0_B9.pdf" ,youtube: "" }
     ],
 
     K9: [
