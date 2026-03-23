@@ -55,7 +55,8 @@ window.DB = {
         { ten_bai: "K9_E3_B2_B3", ngay_tao: "2026-01-10", link: "./K9/K9_E3_B2_B3.pdf" ,youtube: "" },
         { ten_bai: "K9_E3_B4", ngay_tao: "2026-01-10", link: "./K9/K9_E3_B4.pdf" ,youtube: "" },
         { ten_bai: "K9_E3_B5", ngay_tao: "2026-01-12", link: "./K9/K9_E3_B5.pdf" ,youtube: "" },
-        { ten_bai: "K9_F_B1", ngay_tao: "2026-03-16", link: "./K9/K9_F_B1.pdf" ,youtube: "" }
+        { ten_bai: "K9_F_B1", ngay_tao: "2026-03-16", link: "./K9/K9_F_B1.pdf" ,youtube: "" },
+        { ten_bai: "K9_F_B2", ngay_tao: "2026-03-16", link: "./K9/K9_F_B2.pdf" ,youtube: "" }
     ],
 
     K6: [],
