@@ -26,7 +26,8 @@ window.DB = {
         { ten_bai: "K7_E_B8", ngay_tao: "2026-02-20", link: "./K7/K7_E0_B8.pdf" ,youtube: "" },
         { ten_bai: "K7_E_B9", ngay_tao: "2026-02-20", link: "./K7/K7_E0_B9.pdf" ,youtube: "" },
         { ten_bai: "K7_E_B12", ngay_tao: "2026-03-16", link: "./K7/K7_E0_B12.pdf" ,youtube: "" },
-        { ten_bai: "K7_E_B13", ngay_tao: "2026-03-16", link: "./K7/K7_E0_B13.pdf" ,youtube: "" }
+        { ten_bai: "K7_E_B13", ngay_tao: "2026-03-16", link: "./K7/K7_E0_B13.pdf" ,youtube: "" },
+        { ten_bai: "K7_HK2_KTCK", ngay_tao: "2026-03-29", link: "./K7/K7_HK2_KTCK.pdf" ,youtube: "" }
     ],
 
     K9: [
@@ -56,7 +57,12 @@ window.DB = {
         { ten_bai: "K9_E3_B4", ngay_tao: "2026-01-10", link: "./K9/K9_E3_B4.pdf" ,youtube: "" },
         { ten_bai: "K9_E3_B5", ngay_tao: "2026-01-12", link: "./K9/K9_E3_B5.pdf" ,youtube: "" },
         { ten_bai: "K9_F_B1", ngay_tao: "2026-03-16", link: "./K9/K9_F_B1.pdf" ,youtube: "" },
-        { ten_bai: "K9_F_B2", ngay_tao: "2026-03-16", link: "./K9/K9_F_B2.pdf" ,youtube: "" }
+        { ten_bai: "K9_F_B2", ngay_tao: "2026-03-16", link: "./K9/K9_F_B2.pdf" ,youtube: "" },
+
+        { ten_bai: "👉K9_G", ngay_tao: "--", link: "" ,youtube: "" },
+        { ten_bai: "K9_G_B1", ngay_tao: "2026-03-29", link: "./K9/K9_G_B1.pdf" ,youtube: "" },
+        { ten_bai: "K9_G_B2", ngay_tao: "2026-03-29", link: "./K9/K9_G_B2.pdf" ,youtube: "" },
+        { ten_bai: "K9_HK2_KTCK", ngay_tao: "2026-03-29", link: "./K9/K9_HK2_KTCK.pdf" ,youtube: "" }
     ],
 
     K6: [],
