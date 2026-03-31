@@ -27,6 +27,7 @@ window.DB = {
         { ten_bai: "K7_E_B9", ngay_tao: "2026-02-20", link: "./K7/K7_E0_B9.pdf" ,youtube: "" },
         { ten_bai: "K7_E_B12", ngay_tao: "2026-03-16", link: "./K7/K7_E0_B12.pdf" ,youtube: "" },
         { ten_bai: "K7_E_B13", ngay_tao: "2026-03-16", link: "./K7/K7_E0_B13.pdf" ,youtube: "" },
+        { ten_bai: "K7_E_B14", ngay_tao: "2026-03-29", link: "./K7/K7_E0_B14.pdf" ,youtube: "" },
         { ten_bai: "K7_HK2_KTCK", ngay_tao: "2026-03-29", link: "./K7/K7_HK2_KTCK.pdf" ,youtube: "" }
     ],
 
