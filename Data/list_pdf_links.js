@@ -61,6 +61,7 @@ window.DB = {
         { ten_bai: "K9_E3_B5", ngay_tao: "2026-01-12", link: "./K9/K9_E3_B5.pdf" ,youtube: "" },
         { ten_bai: "K9_F_B1", ngay_tao: "2026-03-16", link: "./K9/K9_F_B1.pdf" ,youtube: "" },
         { ten_bai: "K9_F_B2", ngay_tao: "2026-03-16", link: "./K9/K9_F_B2.pdf" ,youtube: "" },
+        { ten_bai: "K9_F0_TH", ngay_tao: "2026-04-15", link: "./K9/K9_F0_TH.pdf" ,youtube: "" },
 
         { ten_bai: "👉K9_G", ngay_tao: "--", link: "" ,youtube: "" },
         { ten_bai: "K9_G_B1", ngay_tao: "2026-03-29", link: "./K9/K9_G_B1.pdf" ,youtube: "" },
